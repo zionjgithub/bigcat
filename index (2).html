@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <input type="text" id="search-input" placeholder="Search...">
+  <button id="search-button">Search</button>
+
+  <p id="search-input">
+    The leopard (Panthera pardus) is one of the five extant species in the genus Panthera, a member of the cat family,
+    Felidae.[4] It occurs in a wide range in sub-Saharan Africa, in some parts of Western and Central Asia, Southern
+    Russia, and on the Indian subcontinent to Southeast and East Asia.
+  </p>
+  <script>
+    function searchText() {
+      const input = document.getElementById("search-input").value;
+      const text = "The leopard (Panthera pardus) is one of the five extant species in the genus Panthera, a member of the cat family, Felidae.[4] It occurs in a wide range in sub-Saharan Africa, in some parts of Western and Central Asia, Southern Russia, and on the Indian subcontinent to Southeast and East Asia.";
+
+      // search for the input value in the text
+      const index = text.indexOf(input);
+
+      // display the search result
+      if (index >= 0) {
+        alert(`"${input}" found at index ${index} in the text.`);
+      } else {
+        alert(`"${input}" not found in the text.`);
+      }
+    }
+    const searchButton = document.getElementById("search-button");
+    searchButton.addEventListener("click", searchText);
+
+
+  </script>
+</body>
+
+</html>
